@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84525007-a2de-4656-91d4-0301e38ad4ca" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2016/03/17/2016-03-17-rabbitmq-02/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2016/03/19/2016-03-19-rabbitmq-03/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2016/03/19/2016-03-19-rabbitmq-04/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2016/03/20/2016-03-20-rabbitmq-05/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2016/03/20/2016-03-20-rabbitmq-06/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2016/03/21/2016-03-21-rabbitmq-07/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2016/03/21/2016-03-21-rabbitmq-08/index.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2016/03/20/2016-03-20-rabbitmq-05/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2016/03/20/2016-03-20-rabbitmq-06/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2016/03/21/2016-03-21-rabbitmq-07/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2016/03/21/2016-03-21-rabbitmq-08/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/03/17/2016-03-17-rabbitmq-01/index.html" afterPath="$PROJECT_DIR$/2016/03/17/2016-03-17-rabbitmq-01/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/03/index.html" afterPath="$PROJECT_DIR$/archives/2016/03/index.html" />
@@ -167,7 +164,7 @@
       <option name="presentableId" value="Default" />
       <updated>1491230931513</updated>
       <workItem from="1491230932700" duration="1484000" />
-      <workItem from="1491356198232" duration="1997000" />
+      <workItem from="1491356198232" duration="2483000" />
     </task>
     <task id="LOCAL-00001" summary="尝试一些文章导入">
       <created>1491230974596</created>
@@ -204,11 +201,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491356388475</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="整理文章">
+      <created>1491379317043</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1491379317043</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3481000" />
+    <option name="totallyTimeSpent" value="3967000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="112" y="31" width="1370" height="727" extended-state="0" />
@@ -247,7 +251,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="尝试一些文章导入" />
     <MESSAGE value="修改文章" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改文章" />
+    <MESSAGE value="整理文章" />
+    <option name="LAST_COMMIT_MESSAGE" value="整理文章" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

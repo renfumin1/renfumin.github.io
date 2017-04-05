@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="84525007-a2de-4656-91d4-0301e38ad4ca" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about/index.html" afterPath="$PROJECT_DIR$/about/index.html" />
     </list>
     <ignored path="public.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -154,7 +153,7 @@
       <option name="presentableId" value="Default" />
       <updated>1491230931513</updated>
       <workItem from="1491230932700" duration="1484000" />
-      <workItem from="1491356198232" duration="3327000" />
+      <workItem from="1491356198232" duration="3936000" />
     </task>
     <task id="LOCAL-00001" summary="尝试一些文章导入">
       <created>1491230974596</created>
@@ -212,11 +211,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491379846311</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="整理文章">
+      <created>1491380639600</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1491380639600</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4811000" />
+    <option name="totallyTimeSpent" value="5420000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="112" y="31" width="1370" height="727" extended-state="0" />

@@ -167,7 +167,7 @@
       <option name="presentableId" value="Default" />
       <updated>1491230931513</updated>
       <workItem from="1491230932700" duration="1484000" />
-      <workItem from="1491356198232" duration="15000" />
+      <workItem from="1491356198232" duration="132000" />
     </task>
     <task id="LOCAL-00001" summary="尝试一些文章导入">
       <created>1491230974596</created>
@@ -190,11 +190,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491280179497</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="修改文章">
+      <created>1491356219246</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1491356219246</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1499000" />
+    <option name="totallyTimeSpent" value="1616000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="36" width="1370" height="727" extended-state="0" />

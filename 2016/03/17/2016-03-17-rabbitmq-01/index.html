@@ -32,6 +32,7 @@
 <p>  RabbitMQ常用的Exchange Type有fanout、direct、topic、headers这四种, 不过headers类型并不太实用, 而且性能比较差, 几乎再也用不到了 。</p>
 </li>
 <li><p>queue(队列): 是RabbitMQ的内部对象, 用于存储消息 ;<br>  RabbitMQ中的消息都只能存储在Queue中，生产者生产消息并通过Exchange(交换机)最终投递到Queue中。</p>
+<p>  注意: 同一个vhost下,声明同名队列, 但是参数不同, 会出现什么情况? 会报错!</p>
 </li>
 <li><p>consumer(消费者, 订阅者):<br>  多个消费者可以订阅同一个Queue，这时Queue中的消息会被平均分摊给多个消费者进行处理，而不是每个消费者都收到所有的消息并处理;</p>
 </li>

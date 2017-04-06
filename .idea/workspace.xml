@@ -2,27 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84525007-a2de-4656-91d4-0301e38ad4ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2016/03/18/2016-03-18-rabbitmq-04/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2016/05/12/2016-05-12-restful-01/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archives/2016/05/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/categories/RESTful/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tags/RESTful/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/nginx/nginx_log_split.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/nginx/psaux_nginx.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2015/07/22/2015-07-22-nginx-02/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2016/04/16/2015-07-20-nginx-01/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2016/04/16/2017-04-16-HTTP-01/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2016/04/16/2017-04-30-MySQL-01/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archives/2015/07/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archives/2015/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archives/2016/04/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/categories/HTTP/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/categories/nginx/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tags/HTTP/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tags/nginx/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/03/17/2016-03-17-rabbitmq-01/index.html" afterPath="$PROJECT_DIR$/2016/03/17/2016-03-17-rabbitmq-01/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/03/17/2016-03-17-rabbitmq-02/index.html" afterPath="$PROJECT_DIR$/2016/03/17/2016-03-17-rabbitmq-02/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/03/18/2016-03-18-rabbitmq-03/index.html" afterPath="$PROJECT_DIR$/2016/03/18/2016-03-18-rabbitmq-03/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/03/18/2016-03-18-rabbitmq-04/index.html" afterPath="$PROJECT_DIR$/2016/03/18/2016-03-18-rabbitmq-04/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/12/2016-05-12-restful-01/index.html" afterPath="$PROJECT_DIR$/2016/05/12/2016-05-12-restful-01/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2017/03/15/2017-03-15-mysql-master-slave-01/index.html" afterPath="$PROJECT_DIR$/2017/03/15/2017-03-15-mysql-master-slave-01/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about/index.html" afterPath="$PROJECT_DIR$/about/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/03/index.html" afterPath="$PROJECT_DIR$/archives/2016/03/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/05/index.html" afterPath="$PROJECT_DIR$/archives/2016/05/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/index.html" afterPath="$PROJECT_DIR$/archives/2016/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2017/03/index.html" afterPath="$PROJECT_DIR$/archives/2017/03/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2017/index.html" afterPath="$PROJECT_DIR$/archives/2017/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/index.html" afterPath="$PROJECT_DIR$/archives/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/categories/Mysql/index.html" afterPath="$PROJECT_DIR$/categories/Mysql/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/categories/RESTful/index.html" afterPath="$PROJECT_DIR$/categories/RESTful/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/categories/RabbitMQ入门/index.html" afterPath="$PROJECT_DIR$/categories/RabbitMQ入门/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content.json" afterPath="$PROJECT_DIR$/content.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/Mysql/index.html" afterPath="$PROJECT_DIR$/tags/Mysql/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/RESTful/index.html" afterPath="$PROJECT_DIR$/tags/RESTful/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/php/index.html" afterPath="$PROJECT_DIR$/tags/php/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/rabbitmq/index.html" afterPath="$PROJECT_DIR$/tags/rabbitmq/index.html" />
     </list>
@@ -176,7 +189,7 @@
       <updated>1491230931513</updated>
       <workItem from="1491230932700" duration="1484000" />
       <workItem from="1491356198232" duration="8633000" />
-      <workItem from="1491480926469" duration="589000" />
+      <workItem from="1491480926469" duration="1210000" />
     </task>
     <task id="LOCAL-00001" summary="尝试一些文章导入">
       <created>1491230974596</created>
@@ -297,11 +310,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491469349381</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="整理文章">
+      <created>1491483499944</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1491483499944</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10706000" />
+    <option name="totallyTimeSpent" value="11327000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="112" y="58" width="1370" height="733" extended-state="0" />

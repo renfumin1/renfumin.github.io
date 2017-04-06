@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>NGINX信号控制 | Lant's TechBlog</title><link rel="stylesheet" type="text/css" href="//fonts.css.network/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.3.0"><link rel="stylesheet" type="text/css" href="/css/highlight.css?v=1.3.0"><link rel="Shortcut Icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">NGINX信号控制</h1><a id="logo" href="/.">Lant's TechBlog</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">NGINX信号控制</h1><div class="post-meta">Jul 22, 2015<span> | </span><span class="category"><a href="/categories/nginx/">nginx</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><p>一. 控制nginx服务的启停有不止一种方法,下面先使用 nginx服务的信号控制<br>1.上节已经编译安装了Nginx, 并且顺利启动 , 那如果要停止/重启Nginx怎么办 ?<br>    nginx的开启: ./nginx<br>    那重启和关闭现在就可以先使用下面的 nginx信号量 !</p>
+<p>2.nginx 的信号控制, 向Nginx主进程发送信号有两种方法 :</p>
+<ul>
+<li>一种是使用Nginx二进制文件, 以后再讲 ;</li>
+<li>另一种方法是使用kill命令发送信号, 用法是: kill -SIGNAL PID</li>
+</ul>
+<p>二.kill命令发送信号:<br>1.INT / TERM</p>
+<ul>
+<li><p>查看nginx服务进程 : ps aux | grep nginx<br>  <img src="/img/nginx/psaux_nginx.png" alt="psaux_nginx"><br>  nginx有一个主进程文件,它不直接响应浏览器请求,而是用来管理子进程;<br>  当有浏览器进行请求的时候,由子进程负责响应, 主进程负责控制子进程;<br>  所以可以看到nginx服务有master process主进程, 也有worker process 这个干活的进程 !</p>
+</li>
+<li><p>对nginx进程施加影响:</p>
+<p>  kill -INT/TERM 3321(主进程号)</p>
+</li>
+<li><p>注意: Term或INT, 轻易不用, 它俩都会直接关闭进程;</p>
+</li>
+</ul>
+<p>2.QUIT</p>
+<ul>
+<li>平滑重启nginx</li>
+</ul>
+<p>3.HUP</p>
+<ul>
+<li>平滑读取新配置文件, 并开启新进程, 然后优雅地关闭旧进程</li>
+<li><p>在修改完nginx的配置文件之后是需要重启生效的, 此处可以使用</p>
+<p>  kill -HUP nginx主进程号</p>
+</li>
+</ul>
+<p>4.USR1 信号 : kill -USR1 主进程号</p>
+<ul>
+<li>重新打开日志文件, 可用于日志切割<br>  在把自定义日志文件重新删除之后, 重新创建一个新的自定义服务日志文件的话, 即使名字完全一样, 我们发现这个新的自定义服务日志文件并不会进行用户访问信息的记录, 除非重启nginx服务;<br>  其实这个时候就需要用到USR1信号量了, 对于新建的同名日志文件(可能文件的id并不同, 所以需要nginx平缓重新确定一下日志文件) :</li>
+<li>切割nginx日志脚本(日志部分探讨) :<br><img src="/img/nginx/nginx_log_split.png" alt="psaux_nginx"></li>
+</ul>
+<p>5.USR2 信号 和 WHICH 信号配合起来使用(以后探讨) ;</p>
+<p>三.nginx也提供了一些命令操作</p>
+<ol>
+<li>-v : 打印版本号并退出</li>
+<li>-V : 打印版本号和配置并退出</li>
+<li>-t : 测试配置正确性并退出, (在配置正确的时候, 也会进行如下提示, 而-qt只在配置出错的情况下有提示)  ( 有时候还会配合-c参数, 用来指定配置文件的路径；当然, 默认情况下会使用nginx安装目录下的conf/nginx.conf,所以-c参数也不多使用)</li>
+<li>-q : 测试配置时只显示错误, 所以 -q 和 -t 一起连用的时候, 如果配置文件无错误的话, 将不会输出上面-t时的内容 :</li>
+<li><p>-s signal : 用来向nginx服务的主进程发送信号:</p>
+<p>./nginx -s stop – 对应的信号量的 kill -INT PID<br>./nginx -s quit  – 百度: 完整有序的停止nginx 对应信号量的 kill -QUIT PID<br>./nginx -s reload ( 明显是重读配置文件 ) – 对应的信号量的 kill -HUP PID<br>./nginx -s reopen – 重新打开日志文件 对应信号量  kill -USR1 PID</p>
+</li>
+</ol>
+</div><div class="tags"><a href="/tags/nginx/">nginx</a></div><div class="post-nav"><a href="/2016/03/17/2016-03-17-rabbitmq-01/" class="pre">01-认识RabbitMQ</a></div><div id="comments"></div></div></div></div><div class="layout-r"><div id="sidebar"><div class="widget"><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="请输入关键字..."/></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-gui"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/HTTP/">HTTP</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/RESTful/">RESTful</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/RabbitMQ入门/">RabbitMQ入门</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/nginx/">nginx</a><span class="category-list-count">2</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> 标签</i></div><div class="tagcloud"><a href="/tags/rabbitmq/" style="font-size: 15px;">rabbitmq</a> <a href="/tags/php/" style="font-size: 15px;">php</a> <a href="/tags/Mysql/" style="font-size: 15px;">Mysql</a> <a href="/tags/RESTful/" style="font-size: 15px;">RESTful</a> <a href="/tags/HTTP/" style="font-size: 15px;">HTTP</a> <a href="/tags/MySQL/" style="font-size: 15px;">MySQL</a> <a href="/tags/nginx/" style="font-size: 15px;">nginx</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-fei"> 归档</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/15/2017-03-15-mysql-master-slave-01/">01-MySQL主从复制原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/12/2016-05-12-restful-01/">RESTful API</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/16/2017-04-16-HTTP-01/">HTTP协议</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/16/2017-04-30-MySQL-01/">MySQL</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/16/2015-07-20-nginx-01/">NGINX初探</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/18/2016-03-18-rabbitmq-04/">03-Exchange Types</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/18/2016-03-18-rabbitmq-03/">03-rabbitmq几个特点</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/17/2016-03-17-rabbitmq-02/">02-RabbitMQ基本架构</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/17/2016-03-17-rabbitmq-01/">01-认识RabbitMQ</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/07/22/2015-07-22-nginx-02/">NGINX信号控制</a></li></ul></div></div></div></div><a id="totop" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.3.0" async></script><div id="footer"><div class="footer-info"><p><span>联系博主：<a href="mailto:goupforever@126.com" target="_blank" class="fa fa-email"></a>|<a href="https://github.com/rymuscle" target="_blank" class="fa fa-github"></a></span></p><p><span> Copyright &copy;<a href="/." rel="nofollow">Ren YiMin</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span><span><a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> Theme </a>by<a rel="nofollow" target="_blank" href="https://github.com/chaooo"> Charles.</a></span></p></div></div></div><script type="text/javascript" src="/js/search.json.js?v=1.3.0"></script></body></html>

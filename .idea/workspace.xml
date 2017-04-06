@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84525007-a2de-4656-91d4-0301e38ad4ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2016/07/20/2015-07-20-nginx-01/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archives/2016/07/index.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2016/04/16/2015-07-20-nginx-01/index.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2015/07/20/2015-07-20-nginx-01/index.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2016/07/20/2015-07-20-nginx-01/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/archives/2016/07/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/archives/2016/page/2/index.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2015/07/22/2015-07-22-nginx-02/index.html" afterPath="$PROJECT_DIR$/2015/07/22/2015-07-22-nginx-02/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/03/17/2016-03-17-rabbitmq-01/index.html" afterPath="$PROJECT_DIR$/2016/03/17/2016-03-17-rabbitmq-01/index.html" />
@@ -22,7 +23,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/04/index.html" afterPath="$PROJECT_DIR$/archives/2016/04/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/05/index.html" afterPath="$PROJECT_DIR$/archives/2016/05/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/index.html" afterPath="$PROJECT_DIR$/archives/2016/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/page/2/index.html" afterPath="$PROJECT_DIR$/archives/2016/page/2/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2017/03/index.html" afterPath="$PROJECT_DIR$/archives/2017/03/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2017/index.html" afterPath="$PROJECT_DIR$/archives/2017/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/index.html" afterPath="$PROJECT_DIR$/archives/index.html" />
@@ -192,7 +192,7 @@
       <updated>1491230931513</updated>
       <workItem from="1491230932700" duration="1484000" />
       <workItem from="1491356198232" duration="8633000" />
-      <workItem from="1491480926469" duration="1638000" />
+      <workItem from="1491480926469" duration="1745000" />
     </task>
     <task id="LOCAL-00001" summary="尝试一些文章导入">
       <created>1491230974596</created>
@@ -341,11 +341,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491487332231</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="修改日期">
+      <created>1491487477423</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1491487477423</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11755000" />
+    <option name="totallyTimeSpent" value="11862000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="112" y="58" width="1370" height="733" extended-state="0" />
@@ -388,7 +395,8 @@
     <MESSAGE value="nginx篇开启" />
     <MESSAGE value="修改标题" />
     <MESSAGE value="修改每页显示数量" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改每页显示数量" />
+    <MESSAGE value="修改日期" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改日期" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

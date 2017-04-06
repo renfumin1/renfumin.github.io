@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>RESTful API | Lant's TechBlog</title><link rel="stylesheet" type="text/css" href="//fonts.css.network/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.3.0"><link rel="stylesheet" type="text/css" href="/css/highlight.css?v=1.3.0"><link rel="Shortcut Icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">RESTful API</h1><a id="logo" href="/.">Lant's TechBlog</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">RESTful API</h1><div class="post-meta">May 12, 2016<span> | </span><span class="category"><a href="/categories/RESTful/">RESTful</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><p>一、认识RESTful架构<br><a href="http://www.ruanyifeng.com/blog/2011/09/restful.html" target="_blank" rel="external">认识RESTful架构</a></p>
+<p>二、RESTful API 设计指南<br>1.网络应用程序,分为前端和后端两个部分。当前的发展趋势,就是前端设备层出不穷（手机、平板、桌面电脑、其他专用设备……）。因此，必须有一种统一的机制,方便不同的前端设备与后端进行通信。这导致API构架的流行，甚至出现”API First”的设计思想。<br>    RESTful API是目前比较成熟的一套互联网应用程序的API设计理论;</p>
+<p>2.如何设计一套合理、好用的API ?</p>
+<ul>
+<li><p>协议: API与用户的通信协议，总是使用HTTPs协议。</p>
+</li>
+<li><p>域名: 应该尽量将API部署在专用域名之下, 如:<a href="https://api.example.com" target="_blank" rel="external">https://api.example.com</a><br>  如果确定API很简单，不会有进一步扩展，可以考虑放在主域名下, 如: <a href="https://example.org/api/" target="_blank" rel="external">https://example.org/api/</a></p>
+</li>
+<li><p>版本:（Versioning）, 应该将API的版本号放入URL, 如:<a href="https://api.example.com/v1/" target="_blank" rel="external">https://api.example.com/v1/</a><br>  另一种做法是，将版本号放在HTTP头信息中，但不如放入URL方便和直观。Github采用这种做法。</p>
+</li>
+<li><p>路径（Endpoint）, 路径又称”终点”（endpoint），表示API的具体网址。<br>  在RESTful架构中，每个网址代表一种资源（resource），所以网址中不能有动词，只能有名词，而且所用的名词往往与数据库的表格名对应。一般来说，数据库中的表都是同种记录的”集合”（collection），所以API中的名词也应该使用复数。<br>  举例来说，有一个API提供动物园（zoo）的信息，还包括各种动物和雇员的信息，则它的路径应该设计成下面这样。<br>  <a href="https://api.example.com/v1/zoos" target="_blank" rel="external">https://api.example.com/v1/zoos</a><br>  <a href="https://api.example.com/v1/animals" target="_blank" rel="external">https://api.example.com/v1/animals</a><br>  <a href="https://api.example.com/v1/employees" target="_blank" rel="external">https://api.example.com/v1/employees</a></p>
+</li>
+<li><p>HTTP动词 （对于资源的具体操作类型，由HTTP动词表示）<br>  常用的HTTP动词有下面五个（括号里是对应的SQL命令）:<br>  GET（SELECT）：从服务器取出资源（一项或多项）。<br>  POST（CREATE）：在服务器新建一个资源。<br>  PUT（UPDATE）：在服务器更新资源（客户端提供改变后的完整资源）。<br>  PATCH（UPDATE）：在服务器更新资源（客户端提供改变的属性）。<br>  DELETE（DELETE）：从服务器删除资源。</p>
+<p>  还有两个不常用的HTTP动词:<br>  HEAD：获取资源的元数据。<br>  OPTIONS：获取信息，关于资源的哪些属性是客户端可以改变的。</p>
+<p>  下面是一些例子:<br>  GET /zoos：列出所有动物园<br>  POST /zoos：新建一个动物园<br>  GET /zoos/ID：获取某个指定动物园的信息<br>  PUT /zoos/ID：更新某个指定动物园的信息（提供该动物园的全部信息）<br>  PATCH /zoos/ID：更新某个指定动物园的信息（提供该动物园的部分信息）<br>  DELETE /zoos/ID：删除某个动物园<br>  GET /zoos/ID/animals：列出某个指定动物园的所有动物<br>  DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物</p>
+</li>
+<li><p>过滤信息（Filtering）, 如果记录数量很多，服务器不可能都将它们返回给用户。API应该提供参数，过滤返回结果,下面是一些常见的参数:<br>  ?limit=10：指定返回记录的数量<br>  ?offset=10：指定返回记录的开始位置。<br>  ?page=2&amp;per_page=100：指定第几页，以及每页的记录数。<br>  ?sortby=name&amp;order=asc：指定返回结果按照哪个属性排序，以及排序顺序。<br>  ?animal_type_id=1：指定筛选条件</p>
+<p>  参数的设计允许存在冗余，即允许API路径和URL参数偶尔有重复。<br>  比如，GET /zoo/ID/animals 与 GET /animals?zoo_id=ID 的含义是相同的。</p>
+</li>
+<li><p>状态码（Status Codes）, 服务器向用户返回的状态码和提示信息，常见的有以下一些（方括号中是该状态码对应的HTTP动词）。</p>
+<pre><code>200 OK - [GET]：服务器成功返回用户请求的数据，该操作是幂等的（Idempotent）。
+201 CREATED - [POST/PUT/PATCH]：用户新建或修改数据成功。
+202 Accepted - [*]：表示一个请求已经进入后台排队（异步任务）
+204 NO CONTENT - [DELETE]：用户删除数据成功。
+400 INVALID REQUEST - [POST/PUT/PATCH]：用户发出的请求有错误，服务器没有进行新建或修改数据的操作，该操作是幂等的。
+401 Unauthorized - [*]：表示用户没有权限（令牌、用户名、密码错误）。
+403 Forbidden - [*] 表示用户得到授权（与401错误相对），但是访问是被禁止的。
+404 NOT FOUND - [*]：用户发出的请求针对的是不存在的记录，服务器没有进行操作，该操作是幂等的。
+406 Not Acceptable - [GET]：用户请求的格式不可得（比如用户请求JSON格式，但是只有XML格式）。
+410 Gone -[GET]：用户请求的资源被永久删除，且不会再得到的。
+422 Unprocesable entity - [POST/PUT/PATCH] 当创建一个对象时，发生一个验证错误。
+500 INTERNAL SERVER ERROR - [*]：服务器发生错误，用户将无法判断发出的请求是否成功。
+</code></pre><p>  状态码的完全列表参见<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" target="_blank" rel="external">这里</a>。</p>
+</li>
+<li><p>错误处理（Error handling）, 如果状态码是4xx，就应该向用户返回出错信息。一般来说，返回的信息中将error作为键名，出错信息作为键值即可。</p>
+<p>  {</p>
+<pre><code>error: &quot;Invalid API key&quot;
+</code></pre><p>  }</p>
+</li>
+<li><p>返回结果, 针对不同操作，服务器向用户返回的结果应该符合以下规范。<br>  GET /collection：返回资源对象的列表（数组）<br>  GET /collection/resource：返回单个资源对象<br>  POST /collection：返回新生成的资源对象<br>  PUT /collection/resource：返回完整的资源对象<br>  PATCH /collection/resource：返回完整的资源对象<br>  DELETE /collection/resource：返回一个空文档</p>
+</li>
+<li><p>Hypermedia API<br>  RESTful API最好做到Hypermedia，即返回结果中提供链接，连向其他API方法，使得用户不查文档，也知道下一步应该做什么。</p>
+<p>  比如，当用户向api.example.com的根目录发出请求，会得到这样一个文档。</p>
+<p>  {</p>
+<pre><code>&quot;link&quot;:
+{
+    &quot;rel&quot;:   &quot;collection https://www.example.com/zoos&quot;,
+    &quot;href&quot;:  &quot;https://api.example.com/zoos&quot;,
+    &quot;title&quot;: &quot;List of zoos&quot;,
+    &quot;type&quot;:  &quot;application/vnd.yourformat+json&quot;
+}
+</code></pre><p>  }</p>
+<p>  上面代码表示，文档中有一个link属性，用户读取这个属性就知道下一步该调用什么API了;<br>  rel表示这个API与当前网址的关系（collection关系，并给出该collection的网址）;<br>  href表示API的路径;<br>  title表示API的标题;<br>  type表示返回类型;</p>
+<p>  Hypermedia API的设计被称为HATEOAS。Github的API就是这种设计，访问api.github.com会得到一个所有可用API的网址列表:</p>
+<p>  {</p>
+<pre><code>&quot;current_user_url&quot;: &quot;https://api.github.com/user&quot;,
+&quot;authorizations_url&quot;: &quot;https://api.github.com/authorizations&quot;,
+// ...
+</code></pre><p>  }</p>
+<p>  从上面可以看到，如果想获取当前用户的信息，应该去访问api.github.com/user，然后就得到了下面结果。</p>
+<p>  {</p>
+<pre><code>&quot;message&quot;: &quot;Requires authentication&quot;,
+&quot;documentation_url&quot;: &quot;https://developer.github.com/v3&quot;
+</code></pre><p>  }</p>
+<p>  上面代码表示，服务器给出了提示信息，以及文档的网址。</p>
+</li>
+<li><p>其他<br>（1）API的身份认证应该使用OAuth 2.0框架。<br>（2）服务器返回的数据格式，应该尽量使用JSON，避免使用XML。</p>
+</li>
+</ul>
+<p>内容摘自<a href="http://www.ruanyifeng.com/" target="_blank" rel="external">阮一峰的博客</a></p>
+</div><div class="tags"><a href="/tags/RESTful/">RESTful</a></div><div class="post-nav"><a href="/2017/03/15/2017-03-15-mysql-master-slave-01/" class="pre">01-MySQL主从复制原理</a><a href="/2016/03/18/2016-03-18-rabbitmq-04/" class="next">03-Exchange Types</a></div><div id="comments"></div></div></div></div><div class="layout-r"><div id="sidebar"><div class="widget"><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="请输入关键字..."/></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-gui"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/RESTful/">RESTful</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/RabbitMQ入门/">RabbitMQ入门</a><span class="category-list-count">4</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> 标签</i></div><div class="tagcloud"><a href="/tags/rabbitmq/" style="font-size: 15px;">rabbitmq</a> <a href="/tags/php/" style="font-size: 15px;">php</a> <a href="/tags/Mysql/" style="font-size: 15px;">Mysql</a> <a href="/tags/RESTful/" style="font-size: 15px;">RESTful</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-fei"> 归档</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/15/2017-03-15-mysql-master-slave-01/">01-MySQL主从复制原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/12/2016-05-12-restful-01/">RESTful API</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/18/2016-03-18-rabbitmq-04/">03-Exchange Types</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/18/2016-03-18-rabbitmq-03/">03-rabbitmq几个特点</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/17/2016-03-17-rabbitmq-02/">02-RabbitMQ基本架构</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/17/2016-03-17-rabbitmq-01/">01-认识RabbitMQ</a></li></ul></div></div></div></div><a id="totop" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.3.0" async></script><div id="footer"><div class="footer-info"><p><span>联系博主：<a href="mailto:goupforever@126.com" target="_blank" class="fa fa-email"></a>|<a href="https://github.com/rymuscle" target="_blank" class="fa fa-github"></a></span></p><p><span> Copyright &copy;<a href="/." rel="nofollow">Ren YiMin</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span><span><a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> Theme </a>by<a rel="nofollow" target="_blank" href="https://github.com/chaooo"> Charles.</a></span></p></div></div></div><script type="text/javascript" src="/js/search.json.js?v=1.3.0"></script></body></html>

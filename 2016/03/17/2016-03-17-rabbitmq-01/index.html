@@ -35,6 +35,14 @@
 </li>
 <li><p>consumer(消费者, 订阅者):<br>  多个消费者可以订阅同一个Queue，这时Queue中的消息会被平均分摊给多个消费者进行处理，而不是每个消费者都收到所有的消息并处理;</p>
 </li>
+<li><p>Message acknowledgment(消息确认 ack)<br>  在实际应用中,可能会发生消费者收到Queue中的消息,但没有处理完成就宕机（或出现其他意外）的情况,这种情况下就可能会导致消息丢失。</p>
+<p>  为了避免这种情况发生,我们可以要求消费者在消费完消息后发送一个回执给RabbitMQ,RabbitMQ收到消息回执（Message acknowledgment）后才将该消息从Queue中移除;如果RabbitMQ没有收到回执并检测到消费者的RabbitMQ连接断开,则RabbitMQ会将该消息发送给其他消费者（如果存在多个消费者）进行处理。这里不存在timeout概念,一个消费者处理消息时间再长也不会导致该消息被发送给其他消费者。</p>
+<p>  这里会产生另外一个问题,如果我们的开发人员在处理完业务逻辑后,忘记发送回执给RabbitMQ,这将会导致严重的bug——Queue中堆积的消息会越来越多; 虽然消费者重启后会重复消费这些消息并重复执行业务逻辑。</p>
+</li>
+<li><p>消息拒绝 reject<br>  既然RabbitMQ提供了ACK某一个消息的命令,当然也提供了Reject某一个消息的命令。<br>  当客户端发生错误,调用basic.reject命令拒绝某一个消息时,可以设置一个requeue的属性:</p>
+<pre><code>如果为true,则消息服务器会重传该消息给下一个订阅者;
+如果为false,则会直接删除该消息; 当然,也可以通过ack,让消息服务器直接删除该消息并且不会重传。
+</code></pre></li>
 </ul>
 <p>4.RoutingKey, BindingKey</p>
 <ul>

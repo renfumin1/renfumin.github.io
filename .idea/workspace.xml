@@ -2,47 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84525007-a2de-4656-91d4-0301e38ad4ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2016/11/15/2016-11-15-mysql-master-slave-01/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2017/03/17/2017-03-17-rabbitmq-01/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2017/03/17/2017-03-17-rabbitmq-02/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2017/03/18/2017-03-18-rabbitmq-03/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2017/03/20/2017-03-20-rabbitmq-05/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2017/03/24/2017-03-24-rabbitmq-07/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2017/03/25/2017-03-25-rabbitmq-08/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2017/03/27/2017-03-27-rabbitmq-09/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2017/03/28/2017-03-28-rabbitmq-10-rpc/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2017/04/12/2017-04-12-restful-01/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2017/04/12/2017-04-12-restful-02/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archives/2016/11/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archives/2017/03/page/2/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archives/2017/04/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archives/2017/page/2/index.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2016/03/17/2016-03-17-rabbitmq-01/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2016/03/17/2016-03-17-rabbitmq-02/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2016/03/18/2016-03-18-rabbitmq-03/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2016/03/18/2016-03-20-rabbitmq-05/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2016/03/24/2016-03-24-rabbitmq-07/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2016/03/25/2016-03-25-rabbitmq-08/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2016/03/25/2016-03-27-rabbitmq-09/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2016/03/28/2016-03-28-rabbitmq-10-rpc/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2016/05/12/2016-05-12-restful-01/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2016/05/14/2016-05-14-restful-02/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2017/03/15/2017-03-15-mysql-master-slave-01/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/archives/2016/03/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/archives/2016/03/page/2/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/archives/2016/05/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/archives/2016/page/2/index.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/rabbitmq/queue_params_no.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2017/03/19/2017-03-19-rabbitmq-04/index.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017/03/24/2017-03-24-rabbitmq-07/index.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2015/07/20/2015-07-20-nginx-01/index.html" afterPath="$PROJECT_DIR$/2015/07/20/2015-07-20-nginx-01/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2015/07/22/2015-07-22-nginx-02/index.html" afterPath="$PROJECT_DIR$/2015/07/22/2015-07-22-nginx-02/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/01/11/2016-01-11-web_safe-01/index.html" afterPath="$PROJECT_DIR$/2016/01/11/2016-01-11-web_safe-01/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/11/15/2016-11-15-mysql-master-slave-01/index.html" afterPath="$PROJECT_DIR$/2016/11/15/2016-11-15-mysql-master-slave-01/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2017/03/17/2017-03-17-rabbitmq-01/index.html" afterPath="$PROJECT_DIR$/2017/03/17/2017-03-17-rabbitmq-01/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2017/03/17/2017-03-17-rabbitmq-02/index.html" afterPath="$PROJECT_DIR$/2017/03/17/2017-03-17-rabbitmq-02/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2017/03/18/2017-03-18-rabbitmq-03/index.html" afterPath="$PROJECT_DIR$/2017/03/18/2017-03-18-rabbitmq-03/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2017/03/20/2017-03-20-rabbitmq-05/index.html" afterPath="$PROJECT_DIR$/2017/03/20/2017-03-20-rabbitmq-05/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2017/03/25/2017-03-25-rabbitmq-08/index.html" afterPath="$PROJECT_DIR$/2017/03/25/2017-03-25-rabbitmq-08/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2017/03/27/2017-03-27-rabbitmq-09/index.html" afterPath="$PROJECT_DIR$/2017/03/27/2017-03-27-rabbitmq-09/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2017/03/28/2017-03-28-rabbitmq-10-rpc/index.html" afterPath="$PROJECT_DIR$/2017/03/28/2017-03-28-rabbitmq-10-rpc/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2017/04/12/2017-04-12-restful-01/index.html" afterPath="$PROJECT_DIR$/2017/04/12/2017-04-12-restful-01/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2017/04/12/2017-04-12-restful-02/index.html" afterPath="$PROJECT_DIR$/2017/04/12/2017-04-12-restful-02/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about/index.html" afterPath="$PROJECT_DIR$/about/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2015/07/index.html" afterPath="$PROJECT_DIR$/archives/2015/07/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2015/index.html" afterPath="$PROJECT_DIR$/archives/2015/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/01/index.html" afterPath="$PROJECT_DIR$/archives/2016/01/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/11/index.html" afterPath="$PROJECT_DIR$/archives/2016/11/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/index.html" afterPath="$PROJECT_DIR$/archives/2016/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2017/03/index.html" afterPath="$PROJECT_DIR$/archives/2017/03/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2017/03/page/2/index.html" afterPath="$PROJECT_DIR$/archives/2017/03/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2017/04/index.html" afterPath="$PROJECT_DIR$/archives/2017/04/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2017/index.html" afterPath="$PROJECT_DIR$/archives/2017/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2017/page/2/index.html" afterPath="$PROJECT_DIR$/archives/2017/page/2/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/index.html" afterPath="$PROJECT_DIR$/archives/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/page/2/index.html" afterPath="$PROJECT_DIR$/archives/page/2/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/categories/Mysql/index.html" afterPath="$PROJECT_DIR$/categories/Mysql/index.html" />
@@ -152,7 +139,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="E:\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/phpStudy/WWW/laravel5.1Study" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -222,7 +209,7 @@
       <workItem from="1491984765729" duration="1216000" />
       <workItem from="1492047197342" duration="1704000" />
       <workItem from="1492133668060" duration="1215000" />
-      <workItem from="1492211777131" duration="566000" />
+      <workItem from="1492211777131" duration="1572000" />
     </task>
     <task id="LOCAL-00001" summary="尝试一些文章导入">
       <created>1491230974596</created>
@@ -413,11 +400,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492052488874</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="时间标记错误">
+      <created>1492212417904</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1492212417904</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24159000" />
+    <option name="totallyTimeSpent" value="25165000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="3" width="1288" height="689" extended-state="0" />
@@ -464,7 +458,8 @@
     <MESSAGE value="mysql" />
     <MESSAGE value="添加安全, restful新文章" />
     <MESSAGE value="修改文章内容" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改文章内容" />
+    <MESSAGE value="时间标记错误" />
+    <option name="LAST_COMMIT_MESSAGE" value="时间标记错误" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

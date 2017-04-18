@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="84525007-a2de-4656-91d4-0301e38ad4ca" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about/index.html" afterPath="$PROJECT_DIR$/about/index.html" />
     </list>
     <ignored path="public.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,8 +35,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="161" />
-    <option name="y" value="64" />
+    <option name="x" value="46" />
+    <option name="y" value="27" />
     <option name="width" value="1288" />
     <option name="height" value="703" />
   </component>
@@ -164,7 +163,7 @@
       <workItem from="1492047197342" duration="1704000" />
       <workItem from="1492133668060" duration="1215000" />
       <workItem from="1492211777131" duration="4050000" />
-      <workItem from="1492480006614" duration="3171000" />
+      <workItem from="1492480006614" duration="3332000" />
     </task>
     <task id="LOCAL-00001" summary="尝试一些文章导入">
       <created>1491230974596</created>
@@ -425,14 +424,21 @@
       <option name="project" value="LOCAL" />
       <updated>1492508922723</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="修改github连接">
+      <created>1492509174668</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1492509174668</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30814000" />
+    <option name="totallyTimeSpent" value="30975000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="161" y="64" width="1288" height="703" extended-state="0" />
+    <frame x="46" y="27" width="1288" height="703" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29641694" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -477,7 +483,8 @@
     <MESSAGE value="修改文章内容" />
     <MESSAGE value="时间标记错误" />
     <MESSAGE value="修改文章" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改文章" />
+    <MESSAGE value="修改github连接" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改github连接" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

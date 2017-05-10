@@ -1,0 +1,19 @@
+delimiter ;;
+create procedure myproc ()
+
+begin
+declare num int ;
+set num = 0 ;
+while num < 5000000 do
+    insert into test (id, `name`)
+values
+    ('', concat("name", num)) ;
+set num = num + 1 ;
+end
+while ;
+
+end;;
+
+call myproc();
+
+drop procedure myproc;
